@@ -42,6 +42,9 @@ const restaurantSchema = new Schema({
     restaurantToken: [{
         type: String,
     }],
+    phone_number: {
+        type: String,
+    }
 }, 
 {
     timestamps: true,

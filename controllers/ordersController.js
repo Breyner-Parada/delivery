@@ -32,9 +32,9 @@ const getOrdersById = async (req, res) => {
 }
 
 const getOrdersByRestaurant = async (req, res) => {
-    const {restaurantId, orderState} = req.query;
+    const { orderState} = req.query;
     try {
-        const orders = await Orders.find({restaurantId, state: orderState})
+        const orders = await Orders.find({state: orderState})
         res.status(200).send(orders);
     } catch (error) {
         res.status(500).send(error);

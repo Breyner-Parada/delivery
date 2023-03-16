@@ -18,8 +18,8 @@ const orders = new Schema({
         type: String,
         required: true,
     },
-    restaurantId: {
-        type: String,
+    toRestaurant: {
+        type: Object,
         required: true,
     },
     state: {

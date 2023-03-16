@@ -40,6 +40,7 @@ io.on('connection', (socket) => {
     });
      socket.on('orderAccepted', ({res, socketid}) => {
             console.log('orderAccepted', res, socketid);
+        socket.emit('somethingCome', res)
          socket.to(socketid).emit('sendNotification', res);
      });
 });
